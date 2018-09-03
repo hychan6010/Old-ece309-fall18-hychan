@@ -1,10 +1,19 @@
+class String {
+  public:
+  const str* string
+  String(const char *s = "")
+  {
+    string = s;
+  }
+};
+
 class ListNode {
 private:
-  Item item;
+  String string;
   ListNode *next;
  public:
-  ListNode(Item a)
-    { item = a; next=NULL }
+  ListNode(String a)
+    { string = a; next=NULL }
   ListNode* getNext() 
   {
     return next;
@@ -13,9 +22,9 @@ private:
   {
   next = n;
   }
-  Item getItem() 
+ string getstring() 
   {
-  return item;
+  return string;
   }
  };
  
@@ -25,10 +34,10 @@ private:
     ListNode *tail;
  public:
     List();
-    void push_back(Item a);
-    bool remove_front(Item &copy);
+    void push_back(String a);
+    bool remove_front(String &copy);
     };
-void List::push_back(Item a)
+void List::push_back(String a)
 {
     ListNode *node = newListNode(a);
     if (head==NULL) {
@@ -39,11 +48,11 @@ void List::push_back(Item a)
         tail = node;
      }
   }
-  bool List::remove_front(Item &copy)
+  bool List::remove_front(String &copy)
   {
     if(!empty())
     {
-      copy = head->getItem();
+      copy = head->getString();
       ListNode *tmp = head->getNext();
       delete head;
       head=tmp;
