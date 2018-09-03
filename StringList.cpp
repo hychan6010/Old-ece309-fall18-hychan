@@ -26,6 +26,9 @@ private:
  public:
     List();
     void append(Item a);
-    bool remove(Item &a);
-    bool empty();
     };
+List::List()
+{
+  head = NULL;
+  tail = NULL;
+}
