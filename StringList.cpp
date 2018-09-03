@@ -67,3 +67,9 @@ List::List()
   head = NULL;
   tail = NULL;
 }
+  List::~List()
+  {
+    Item t;
+    while(!empty())
+      remove(t);
+  }
