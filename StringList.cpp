@@ -25,8 +25,34 @@ private:
     ListNode *tail;
  public:
     List();
-    void append(Item a);
+    void push_back(Item a);
+    bool remove_front(Item &copy);
     };
+void List::push_back(Item a)
+{
+    ListNode *node = newListNode(a);
+    if (head==NULL) {
+    head = node;
+    tail = node;
+    } else {
+        tail->setNext(node);
+        tail = node;
+     }
+  }
+  bool List::remove_front(Item &copy)
+  {
+    if(!empty())
+    {
+      copy = head->getItem();
+      ListNode *tmp = head->getNext();
+      delete head;
+      head=tmp;
+      if(tmp==NULL)
+          tail = NULL;
+       return true;
+    }
+      return false;
+  }
 List::List()
 {
   head = NULL;
