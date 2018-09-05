@@ -44,6 +44,7 @@ private:
     List();
     void push_back(String a);
     bool remove_front(String &copy);
+    bool empty();
     };
 void List::push_back(String a)
 {
