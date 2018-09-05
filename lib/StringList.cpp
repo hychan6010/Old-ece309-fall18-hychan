@@ -22,7 +22,7 @@ private:
     string = a;
     next=NULL; 
     }
-  ListNode* getNext() 
+  ListNode *getNext() 
   {
     return next;
   }
@@ -41,10 +41,14 @@ private:
     ListNode *tail;
 
   public:
+  int counter;
     List();
     void push_back(String a);
+    String get(int n)
+     int length();
     bool remove_front(String &copy);
     bool empty();
+    ~List();
     };
 void List::push_back(String a)
 {
@@ -55,6 +59,7 @@ void List::push_back(String a)
     } else {
         tail->setNext(node);
         tail = node;
+      counter++;
      }
   }
   bool List::remove_front(String &copy)
@@ -75,6 +80,7 @@ List::List()    //constructor
 {
   head = NULL;
   tail = NULL;
+  counter = 0;
 }
   List::~List() //deconstructor
   {
@@ -84,10 +90,16 @@ List::List()    //constructor
   }
   int List::length() 
   { 
-    int counter = String.size();
-    return counter;
+   return count;
   }
 
+  String List::get(int n){
+    ListNode *node = head -> getNext();
+    for(int i = 0; i<n; i++){
+      node = node ->getNext();
+    }
+    return node -> getString();
+  }
 bool List::empty()
 {
   return head==NULL;
