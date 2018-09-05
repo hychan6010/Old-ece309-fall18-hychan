@@ -30,7 +30,7 @@ private:
   {
   next = n;
   }
- string getString() 
+ String getString() 
   {
   return string;
   }
@@ -47,7 +47,7 @@ private:
     };
 void List::push_back(String a)
 {
-    ListNode *node = newListNode(a);
+    ListNode *node = new ListNode(a);
     if (head==NULL) {
     head = node;
     tail = node;
@@ -87,4 +87,8 @@ List::List()    //constructor
     return counter;
   }
 
+  bool List::empty()
+  {
+      return head ==NULL;
+  }
   
