@@ -1,3 +1,5 @@
+  #include <stdio.h>
+
 class String {
   public:
   const str* string
