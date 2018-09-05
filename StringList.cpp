@@ -2,7 +2,7 @@
 
 class String {
   public:
-  const str* string
+  const char* string
   String(const char *s = "")
   {
     string = s;
@@ -64,14 +64,21 @@ void List::push_back(String a)
     }
       return false;
   }
-List::List()
+List::List()    //constructor
 {
   head = NULL;
   tail = NULL;
 }
-  List::~List()
+  List::~List() //deconstructor
   {
     Item t;
     while(!empty())
       remove(t);
   }
+  int List::length() 
+  { 
+    int counter = String.size();
+    return counter;
+  }
+
+  
