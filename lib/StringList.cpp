@@ -78,7 +78,7 @@ List::List()    //constructor
 }
   List::~List() //deconstructor
   {
-    Item t;
+    String t;
     while(!empty())
       remove(t);
   }
