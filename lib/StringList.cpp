@@ -15,7 +15,10 @@ private:
   ListNode *next;
  public:
   ListNode(String a)
-    { string = a; next=NULL }
+    { 
+    string = a;
+    next=NULL; 
+    }
   ListNode* getNext() 
   {
     return next;
@@ -24,7 +27,7 @@ private:
   {
   next = n;
   }
- string getstring() 
+ string getString() 
   {
   return string;
   }
