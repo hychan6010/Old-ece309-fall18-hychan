@@ -80,7 +80,7 @@ List::List()    //constructor
   {
     String t;
     while(!empty())
-      remove(t);
+      remove_front(t);
   }
   int List::length() 
   { 
