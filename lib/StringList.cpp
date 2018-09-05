@@ -87,8 +87,8 @@ List::List()    //constructor
     return counter;
   }
 
-  bool List::empty()
-  {
-      return head ==NULL;
-  }
+bool List::empty()
+{
+  return head==NULL;
+}
   
