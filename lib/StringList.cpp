@@ -44,7 +44,7 @@ private:
   int counter;
     List();
     void push_back(String a);
-    String get(int n)
+    String get(int n);
      int length();
     bool remove_front(String &copy);
     bool empty();
@@ -90,7 +90,7 @@ List::List()    //constructor
   }
   int List::length() 
   { 
-   return count;
+   return counter;
   }
 
   String List::get(int n){
