@@ -9,6 +9,9 @@ class String {
   }
 };
 
+class List {
+private:
+  
 class ListNode {
 private:
   String string;
@@ -33,11 +36,11 @@ private:
   }
  };
  
-class List {
-private:
+
     ListNode *head;
     ListNode *tail;
- public:
+
+  public:
     List();
     void push_back(String a);
     bool remove_front(String &copy);
