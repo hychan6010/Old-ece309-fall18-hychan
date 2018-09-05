@@ -2,7 +2,7 @@
 
 class String {
   public:
-  const char* string
+  const char* string;
   String(const char *s = "")
   {
     string = s;
